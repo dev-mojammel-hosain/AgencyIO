@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single service Page</title>
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="overflow-wrp">
+  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/logo/logo.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mobile-app.html">Mobile App</a> 
+        </li>
+      </ul>
+      <form class="d-flex nav-search" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="search-icon" type="submit"><img src="assets/icon/Search.png" alt=""></button>
+      </form>
+      <div class="nav-cart">
+        <div class="cart-count">0</div>
+        <a href="cart.html"><img src="assets/icon/cart.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar -->
+<br>
+
+<div class="container">
+    <section id="product-box">
+        <div class="product-img">
+            <img src="assets/services/single-product.png" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="p-title">Modulo per la richiesta di passaporto per maggiorenni</h1>
+            <p class="ps-price">
+                <del class="p-price-gray">$48.00</del>
+                $17.28
+            </p>
+            <p class="p-description">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. </p>
+
+            <div class="p-purchase">
+              <div class="p-quantity">
+                  <button class="p-decrement-btn p-gray">-</button>
+                  <input
+                      type="number"
+                      id="p-quantity-input"
+                      value="1"
+                      min="1"
+                      class="p-quantity-input"
+                      readonly>
+                  <button class="p-increment-btn">+</button>
+                  <!-- script for increasing quantity  -->
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                    const decrementBtn = document.querySelector(".p-decrement-btn");
+                    const incrementBtn = document.querySelector(".p-increment-btn");
+                    const quantityInput = document.getElementById("p-quantity-input");
+
+                    const updateButtonState = () => {
+                      const value = parseInt(quantityInput.value, 10);
+                      if (value <= 1) {
+                        decrementBtn.classList.add("p-gray"); // visually "disabled"
+                      } else {
+                        decrementBtn.classList.remove("p-gray");
+                      }
+                    };
+
+                    incrementBtn.addEventListener("click", () => {
+                      let currentValue = parseInt(quantityInput.value, 10);
+                      quantityInput.value = currentValue + 1;
+                      updateButtonState();
+                    });
+
+                    decrementBtn.addEventListener("click", () => {
+                      let currentValue = parseInt(quantityInput.value, 10);
+                      if (currentValue > 1) {
+                        quantityInput.value = currentValue - 1;
+                        updateButtonState();
+                      }
+                    });
+
+                    // Initialize on page load
+                    updateButtonState();
+                  });
+                  </script>
+                  <!-- script for increasing quantity  -->
+              </div>
+              <button class="p-cart-btn">Add to Cart <i class="fa-solid fa-cart-shopping"></i></butto>
+              <button class="p-buy-now">Buy now</button>
+            </div>
+
+            <div class="p-tags">
+              <h4>Tags :</h4>
+              <p>Demo1</p>
+              <p>Demo2</p>
+              <p>Demo3</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="big-decription-wrp">
+      <div class="big-des-title">
+        <h4>Descriptions</h4>
+      </div>
+
+      <div class="big-decription">
+        <div class="desc-left">
+          <p>
+            Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel. Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam scelerisque vitae justo a convallis. Morbi urna ipsum, placerat quis commodo quis, egestas elementum leo. Donec convallis mollis enim. Aliquam id mi quam. Phasellus nec fringilla elit.
+          </p>
+          <p>
+            Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus faucibus elementum tincidunt, turpis mi viverra velit, pellentesque tristique neque mi eget nulla. Proin luctus elementum neque et pharetra.
+          </p>
+          <ul class="big-desc-list">
+            <li><i class="fa-solid fa-circle-check"></i>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li><i class="fa-solid fa-circle-check"></i>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li><i class="fa-solid fa-circle-check"></i>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li><i class="fa-solid fa-circle-check"></i>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </li>
+          </ul>
+          <p>
+            Cras et diam maximus, accumsan sapien et, sollicitudin velit. Nulla blandit eros non turpis lobortis iaculis at ut massa. 
+          </p>
+        </div>
+        <div class="desc-right">
+          <a href="#" class="video-link">
+            <img src="assets/services/video.png" alt="">
+            <i class="fa-solid fa-circle-play"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="related-services">
+      <div class="main-common-title">
+        <h2>Related <span>Services</span></h2>
+      </div>
+
+      <div class="rel-ser-wrp">
+        <div class="service-single">
+          <a id="product-link" href="product.html">
+            <img src="assets/services/single.png" alt="">
+            <h3>Modulo per la richiesta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam deleniti reiciendis doloribus temporibus et consectetur vero blanditiis non, necessitatibus numquam cumque excepturi odio sequi! Excepturi asperiores pariatur nisi illum, expedita iste debitis nobis laboriosam error eveniet obcaecati ab est animi reiciendis atque doloribus aliquam, vel, esse temporibus sequi illo fugit alias! Accusamus necessitatibus accusantium quae aliquam, voluptate ipsum eos quam. </h3>
+            <p>€ 32.00 <del> € 40.00</del></p>
+            <button>View Service<i class="fa-solid fa-arrow-right"></i></button>
+          </a>
+        </div>
+        <div class="service-single">
+          <a id="product-link" href="product.html">
+            <img src="assets/services/single.png" alt="">
+            <h3>Modulo per la richiesta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam deleniti reiciendis doloribus temporibus et consectetur vero blanditiis non, necessitatibus numquam cumque excepturi odio sequi! Excepturi asperiores pariatur nisi illum, expedita iste debitis nobis laboriosam error eveniet obcaecati ab est animi reiciendis atque doloribus aliquam, vel, esse temporibus sequi illo fugit alias! Accusamus necessitatibus accusantium quae aliquam, voluptate ipsum eos quam. </h3>
+            <p>€ 32.00 <del> € 40.00</del></p>
+            <button>View Service<i class="fa-solid fa-arrow-right"></i></button>
+          </a>
+        </div>
+        <div class="service-single">
+          <a id="product-link" href="product.html">
+            <img src="assets/services/single.png" alt="">
+            <h3>Modulo per la richiesta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam deleniti reiciendis doloribus temporibus et consectetur vero blanditiis non, necessitatibus numquam cumque excepturi odio sequi! Excepturi asperiores pariatur nisi illum, expedita iste debitis nobis laboriosam error eveniet obcaecati ab est animi reiciendis atque doloribus aliquam, vel, esse temporibus sequi illo fugit alias! Accusamus necessitatibus accusantium quae aliquam, voluptate ipsum eos quam. </h3>
+            <p>€ 32.00 <del> € 40.00</del></p>
+            <button>View Service<i class="fa-solid fa-arrow-right"></i></button>
+          </a>
+        </div>
+        <div class="service-single">
+          <a id="product-link" href="product.html">
+            <img src="assets/services/single.png" alt="">
+            <h3>Modulo per la richiesta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam deleniti reiciendis doloribus temporibus et consectetur vero blanditiis non, necessitatibus numquam cumque excepturi odio sequi! Excepturi asperiores pariatur nisi illum, expedita iste debitis nobis laboriosam error eveniet obcaecati ab est animi reiciendis atque doloribus aliquam, vel, esse temporibus sequi illo fugit alias! Accusamus necessitatibus accusantium quae aliquam, voluptate ipsum eos quam. </h3>
+            <p>€ 32.00 <del> € 40.00</del></p>
+            <button>View Service<i class="fa-solid fa-arrow-right"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="f-main">
+      <div class="f-col1">
+        <h2>Agency<span>IO</span></h2>
+        <p>At AgencyIO, we believe in delivering high-quality, professional services tailored to meet the evolving needs of businesses and individuals. With a team of industry experts, we specialize in providing innovative solutions that help brands grow, streamline operations, and achieve success</p>
+      </div>
+      <div class="f-col2">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="services.html">Service</a></li>
+          <li><a href="index.html#pricing">Plans</a></li>
+          <li><a href="terms.html">Terms & Condition</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="f-col3">
+        <h2 class="newsletter-title">Want to receive a monthly email in your inbox?</h2>
+        <form class="newsletter-form">
+          <input type="news-email" class="newsletter-input" placeholder="Enter your email" required />
+          <button type="news-submit" class="newsletter-button">Subscribe</button>
+        </form>
+  
+        <div class="social-links-footer">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="f-copy">
+      <p>© Copyright AgencyIO, 2025. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+</div>
+
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
