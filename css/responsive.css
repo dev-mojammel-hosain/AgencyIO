@@ -1,6 +1,11 @@
 @media (min-width: 320px) and (max-width: 575.98px) { 
-    .nav-search {
-        margin-bottom: 20px !important;
+    .nav-right{
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    .nav-right{
+        opacity: 1 !important;
+        visibility: visible !important;;
     }
     .hero{
         flex-direction: column-reverse !important;
@@ -261,13 +266,14 @@
 
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
-    .nav-search {
-        margin-bottom: 20px !important;
-    }
     .hero{
         flex-direction: column-reverse !important;
         align-items: center !important;
         justify-content: center !important;
+    }
+    .nav-right{
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     .h-right {
         width: 80% !important;
@@ -523,13 +529,14 @@
 
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
-    .nav-search {
-        margin-bottom: 20px !important;
-    }
     .hero{
         flex-direction: column-reverse !important;
         align-items: center !important;
         justify-content: center !important;
+    }
+    .nav-right{
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     .h-right {
         width: 60% !important;
@@ -786,9 +793,6 @@
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .h-right img {
         width: 100% !important;
-    }
-    .nav-search {
-        margin-bottom: 0px !important;
     }
     .main-title {
         width: 100% !important;

@@ -1,3 +1,47 @@
+// Jquery Start ==========================
+$(document).ready(function() {
+  // Show all items initially
+  $('.service-item').fadeIn();
+
+  $('.filter-btn').on('click', function() {
+    var filterValue = $(this).attr('data-filter');
+
+    $('.filter-btn').removeClass('c-active');
+    $(this).addClass('c-active');
+
+    if (filterValue == 'all') {
+      $('.service-item').fadeIn();
+    } else {
+      $('.service-item').hide();
+      $('.' + filterValue).fadeIn();
+    }
+  });
+
+  $('#nav-burger').on('click', function() {
+    $('#mobile-nav-menu').css({
+        'transform': 'translateX(0%)',
+        'opacity': '1',
+        'visibility': 'visible'
+      });
+    });
+  $('#nav-cross').on('click', function() {
+    $('#mobile-nav-menu').css({
+        'transform': 'translateX(100%)',
+        'opacity': '0',
+        'visibility': 'hidden'
+      });
+    });
+  $('.mobile-nav-list').on('click', function() {
+    $('#mobile-nav-menu').css({
+        'transform': 'translateX(100%)',
+        'opacity': '0',
+        'visibility': 'hidden'
+      });
+    });
+
+});
+  
+// Jquery End ============================
 
 // On scroll navbar menu Highlight
 const sections = document.querySelectorAll("section");
@@ -39,6 +83,7 @@ const submitButton = document.getElementById('submit-button');
 const clearButton = document.getElementById('clear-button');
 const buttonContainer = document.querySelector('.button-container');
 
+
 collapseButton.addEventListener('click', (event) => {
   tagList.classList.toggle('collapsed');
   buttonContainer.classList.toggle('collapsed'); /* Toggle collapsed class on buttons container */
@@ -72,33 +117,3 @@ toggleButton.addEventListener("click", () => {
   slideContainer.classList.toggle("expanded");
 });
 // Filter toggler End ==========================
-
-// Quantity counter Start ============================
-
-// Quantity counter End ============================
-
-// Jquery Start ==========================
-$(document).ready(function() {
-  // Show all items initially
-  $('.service-item').fadeIn();
-
-  $('.filter-btn').on('click', function() {
-    var filterValue = $(this).attr('data-filter');
-
-    $('.filter-btn').removeClass('c-active');
-    $(this).addClass('c-active');
-
-    if (filterValue == 'all') {
-      $('.service-item').fadeIn();
-    } else {
-      $('.service-item').hide();
-      $('.' + filterValue).fadeIn();
-    }
-  });
-});
-// Jquery End ============================
-
-
-
-
-
