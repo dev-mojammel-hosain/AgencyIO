@@ -1,6 +1,6 @@
-# 🚀 AgencyIO – Cross-Platform UI/UX & Front-End Development
+# AgencyIO – Cross-Platform UI/UX & Front-End Development
 
-**AgencyIO - UI/UX & Front-End for Mobile App and Web Application**
+**UI/UX & Front-End for Mobile App and Web Application**
 
 `UI/UX` `Mobile App` `Figma` `CSS` `JavaScript` `jQuery` `Web Application`
 
@@ -42,7 +42,7 @@ AgencyIO is a modern agency platform designed to deliver a seamless user experie
 
 ## 📸 Screenshots
 
- `![Screenshot](./assets/download/mockup.png)`
+ ![Screenshot](./assets/download/mockup.png)
 
 ---
 
